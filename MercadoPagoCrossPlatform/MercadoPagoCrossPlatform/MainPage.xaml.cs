@@ -13,5 +13,10 @@ namespace MercadoPagoCrossPlatform
         {
             InitializeComponent();
         }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            Support.MercadoPagoService.Instance.StartPayment("APP_USR-89fc92e4-5a84-497f-bd53-248228d396cb", null);
+        }
     }
 }
