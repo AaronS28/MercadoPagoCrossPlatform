@@ -6,6 +6,8 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Android.Content;
+using MercadoPagoCrossPlatform.Droid.Service;
 
 namespace MercadoPagoCrossPlatform.Droid
 {
@@ -19,7 +21,14 @@ namespace MercadoPagoCrossPlatform.Droid
 
             base.OnCreate(savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+            MercadoPagoService.Init(this);
             LoadApplication(new App());
+        }
+
+        protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
+        {
+            base.OnActivityResult(requestCode, resultCode, data);
+            MercadoPagoService.OnActivityResult(requestCode, resultCode, data);
         }
     }
 }

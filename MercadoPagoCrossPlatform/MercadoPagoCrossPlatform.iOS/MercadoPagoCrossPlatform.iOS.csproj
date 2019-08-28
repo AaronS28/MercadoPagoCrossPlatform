@@ -92,6 +92,7 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="Service\LifeCycleProtocol.cs" />
     <Compile Include="Service\MercadoPagoService.cs" />
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
@@ -143,6 +144,9 @@
     </ImageAsset>
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="MercadoPagoSDK">
+      <HintPath>C:\Users\Aaron Soria\source\repos\testMercadoPagoSDK\testMercadoPagoSDK\bin\Release\MercadoPagoSDK.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
