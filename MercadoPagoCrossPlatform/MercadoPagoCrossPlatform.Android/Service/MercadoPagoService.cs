@@ -1,14 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Android.App;
-using Android.Content;
-using Android.OS;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using MercadoPagoCrossPlatform.Droid.Service;
 using MercadoPagoCrossPlatform.Interfaces;
 using Xamarin.Forms;
@@ -18,9 +8,11 @@ namespace MercadoPagoCrossPlatform.Droid.Service
 {
     public class MercadoPagoService : IMercadoPagoService
     {
-        public void StartPayment(string preferenceId, EventHandler onPaymentResult)
+        public void StartPayment(string publicKey, string preferenceId, EventHandler onPaymentResult)
         {
-            Console.WriteLine("Hello World");
+            new Com.Mercadopago.Android.PX.Core.MercadoPagoCheckout.Builder(publicKey, preferenceId)
+                .Build()
+                .StartPayment(Android.App.Application.Context, 15);
         }
     }
 }

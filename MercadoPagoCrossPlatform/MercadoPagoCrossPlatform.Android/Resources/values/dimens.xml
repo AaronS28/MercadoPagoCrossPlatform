@@ -1,0 +1,31 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+  <dimen name="ui_fontsize_xxsmall">16dp</dimen>
+  <dimen name="button_text_size">16dp</dimen>
+  <dimen name="ui_dialog_title_height">16dp</dimen>
+  <dimen name="ui_dialog_title_linespacing">16dp</dimen>
+  <dimen name="ui_fontsize_xlarge">16dp</dimen>
+  <dimen name="ui_linespacing_medium">16dp</dimen>
+  <dimen name="ui_fontsize_medium">16dp</dimen>
+  <dimen name="ui_fontsize_xsmall">16dp</dimen>
+  <dimen name="ui_fontsize_xxsmall">16dp</dimen>
+  <dimen name="px_xl_alternative_margin">16dp</dimen>
+  <dimen name="px_xxl_text">16dp</dimen>
+  <dimen name="px_xxxs_text">16dp</dimen>
+  <dimen name="px_badge_offset">16dp</dimen>
+  <dimen name="px_bigger_badge_size">16dp</dimen>
+  <dimen name="px_card_padding_low_res">16dp</dimen>
+  <dimen name="px_s_height">16dp</dimen>
+  <dimen name="px_title_pager_padding_right">16dp</dimen>
+  <dimen name="ui_linespacing_large">16dp</dimen>
+  <dimen name="ui_linespacing_xlarge">16dp</dimen>
+  <dimen name="ui_linespacing_xxlarge">16dp</dimen>
+  <dimen name="ui_linespacing_small">16dp</dimen>
+  <dimen name="ui_linespacing_xsmall">16dp</dimen>
+  <dimen name="ui_linespacing_xxsmall">16dp</dimen>
+  <dimen name="ui_fontsize_large">16dp</dimen>
+  <dimen name="ui_fontsize_xxlarge">16dp</dimen>
+  <dimen name="ui_fontsize_small">16dp</dimen>
+  
+</resources>
+

@@ -27,4 +27,246 @@
   <style name="AppCompatDialogStyle" parent="Theme.AppCompat.Light.Dialog">
     <item name="colorAccent">#FF4081</item>
   </style>
+
+  <declare-styleable name="MPTextView">
+    <attr format="string" name="fontStyle" />
+    <attr format="boolean" name="allowCustomFont" />
+  </declare-styleable>
+
+  <!--<declare-styleable name="MeliButton">
+    <attr format="string" name="state"/>
+    <attr format="string" name="type"/>
+  </declare-styleable>
+
+  <declare-styleable name="MeliSpinner">
+    <attr format="string" name="size"/>
+  </declare-styleable>-->
+
+  <declare-styleable name="TextField">
+    <attr format="integer" name="ui_textFieldMaxLines"/>
+  </declare-styleable>
+  
+  <style name="CollapsedAppBar" parent="@android:style/TextAppearance.Medium">
+    <item name="android:textSize">19dp</item>
+    <item name="android:textColor">@color/px_white</item>
+  </style>
+  <style name="DealsDescription">
+    <item name="android:textSize">@dimen/px_small_text</item>
+    <item name="android:textColor">@color/ui_meli_grey</item>
+  </style>
+  <style name="DealsDetailTitle">
+    <item name="android:textSize">@dimen/px_title_text</item>
+    <item name="android:textColor">@color/ui_meli_black</item>
+  </style>
+  <style name="DealsLegal">
+    <item name="android:textSize">@dimen/px_smaller_text</item>
+    <item name="android:textColor">@color/ui_meli_grey</item>
+  </style>
+  <style name="DealsListTitle">
+    <item name="android:textSize">@dimen/px_regular_text</item>
+    <item name="android:textColor">@color/px_real_black</item>
+  </style>
+  <style name="DealsLogoName">
+    <item name="android:textSize">@dimen/px_title_text</item>
+    <item name="android:textColor">@color/ui_meli_grey</item>
+    <item name="android:lines">2</item>
+    <item name="android:ellipsize">end</item>
+  </style>
+  <style name="HeaderSubtitleText">
+    <item name="android:textSize">@dimen/px_s_text</item>
+    <item name="android:textColor">@color/ui_meli_dark_grey</item>
+  </style>
+  <style name="HeaderTitleText">
+    <item name="android:textSize">@dimen/px_l_text</item>
+    <item name="android:textColor">@color/ui_meli_black</item>
+  </style>
+  <style name="MPTransparentActionBar" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+    <item name="android:windowActionBarOverlay">true</item>
+    Support library compatibility
+    <item name="windowActionBarOverlay">true</item>
+  </style>
+  <style name="ReviewToolbarTheme" parent="Theme.MercadoPagoTheme.NoActionBar">
+    <item name="colorControlNormal">@color/px_review_toolbar_text</item>
+  </style>
+  <style name="Theme.MercadoPagoTheme" parent="Theme.AppCompat.Light">
+    <item name="colorPrimary">@color/px_colorPrimary</item>
+    <item name="colorControlNormal">@color/px_color_new_card_text</item>
+    <item name="colorAccent">@color/px_colorAccent</item>
+    <item name="actionMenuTextColor">@color/px_white</item>
+  </style>
+  <style name="Theme.MercadoPagoTheme.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+    <item name="windowActionBar">false</item>
+    <item name="windowNoTitle">true</item>
+  </style>
+  <style name="TimeText">
+    <item name="android:textColor">@color/ui_meli_dark_grey</item>
+    <item name="android:textSize">@dimen/px_xs_text</item>
+    <item name="android:drawablePadding">@dimen/px_xxxs_margin</item>
+    <item name="android:drawableLeft">@drawable/px_time</item>
+    <item name="android:drawableStart">@drawable/px_time</item>
+  </style>
+  <style name="ToolbarTheme" parent="Theme.MercadoPagoTheme.NoActionBar">
+    <item name="colorControlNormal">@color/px_toolbar_text</item>
+    <item name="android:background">@color/px_background</item>
+  </style>
+  <style name="ToolbarTransparentTheme" parent="Theme.MercadoPagoTheme.NoActionBar">
+    <item name="colorControlNormal">@color/px_toolbar_text</item>
+    <item name="android:windowActionBarOverlay">true</item>
+    <item name="windowActionBarOverlay">true</item>
+    <item name="windowNoTitle">true</item>
+  </style>
+  <style name="px_big_text_light">
+    <item name="android:textSize">@dimen/px_big_text</item>
+    <item name="android:textColor">#999999</item>
+  </style>
+  <style name="px_button_normal" parent="@android:style/Widget.Button">
+    <item name="android:background">@drawable/px_button</item>
+    <item name="android:textSize">@dimen/px_big_text</item>
+    <item name="android:textColor">@color/px_white</item>
+  </style>
+  <style name="px_collapsing_review_toolbar_text_large" parent="Base.TextAppearance.AppCompat.Large">
+    <item name="android:textColor">@color/px_review_toolbar_text</item>
+  </style>
+  <style name="px_collapsing_review_toolbar_text_medium" parent="Base.TextAppearance.AppCompat.Medium">
+    <item name="android:textColor">@color/px_review_toolbar_text</item>
+  </style>
+  <style name="px_collapsing_toolbar_text_large" parent="Base.TextAppearance.AppCompat.Large">
+    <item name="android:textColor">@color/px_toolbar_text</item>
+  </style>
+  <style name="px_collapsing_toolbar_text_medium" parent="Base.TextAppearance.AppCompat.Medium">
+    <item name="android:textColor">@color/px_toolbar_text</item>
+  </style>
+  <style name="px_list_label">
+    <item name="android:textSize">@dimen/px_regular_text</item>
+    <item name="android:textColor">@color/px_form_text</item>
+  </style>
+  <style name="px_list_label_comment">
+    <item name="android:textSize">@dimen/px_small_text</item>
+    <item name="android:textColor">@color/px_comment_color</item>
+  </style>
+  <style name="px_simple_spinner">
+    <item name="android:textSize">@dimen/px_regular_text</item>
+    <item name="android:textColor">@color/px_base_text</item>
+  </style>
+  <style name="px_small_white_text">
+    <item name="android:textSize">@dimen/px_small_text</item>
+    <item name="android:textColor">@color/px_white</item>
+  </style>
+  <style name="px_title_text">
+    <item name="android:textSize">@dimen/px_title_text</item>
+    <item name="android:textColor">@color/px_toolbar_text</item>
+  </style>
+  <style name="px_toolbar_text">
+    <item name="android:textColor">@color/px_toolbar_text</item>
+  </style>
+  <style name="px_toolbar_text_large" parent="px_toolbar_text">
+    <item name="android:textSize">@dimen/px_l_text</item>
+  </style>
+  <style name="px_toolbar_text_medium" parent="px_toolbar_text">
+    <item name="android:textSize">@dimen/px_m_text</item>
+  </style>
+  <style name="px_toolbar_text_small" parent="px_toolbar_text">
+    <item name="android:textSize">@dimen/px_s_text</item>
+  </style>
+  <style name="px_toolbar_text_xx_small" parent="px_toolbar_text">
+    <item name="android:textSize">@dimen/px_xxs_text</item>
+  </style>
+
+  <style name="Theme.ProcessMercadoPagoTheme.NoActionbar" parent="Theme.MercadoPagoTheme.NoActionBar">
+    <item name="android:textSize">@dimen/px_xxs_text</item>
+  </style>
+
+  <style name="Theme.InstructionsMercadoPagoTheme.NoActionbar" parent="Theme.MercadoPagoTheme.NoActionBar">
+    <item name="android:textSize">@dimen/px_xxs_text</item>
+  </style>
+
+  <style name="Theme.CongratsMercadoPagoTheme.NoActionbar" parent="Theme.MercadoPagoTheme.NoActionBar">
+    <item name="android:textSize">@dimen/px_xxs_text</item>
+  </style>
+
+  <style name="Theme.RejectionMercadoPagoTheme.NoActionbar" parent="Theme.MercadoPagoTheme.NoActionBar">
+    <item name="android:textSize">@dimen/px_xxs_text</item>
+  </style>
+
+  <style name="Theme.RejectionMercadoPagoTheme.NoActionbar" parent="Theme.MercadoPagoTheme.NoActionBar">
+    <item name="android:textSize">@dimen/px_xxs_text</item>
+  </style>
+
+  <style name="Theme.PendingMercadoPagoTheme.NoActionbar" parent="Theme.MercadoPagoTheme.NoActionBar">
+    <item name="android:textSize">@dimen/px_xxs_text</item>
+  </style>
+
+  <style name="Theme.CallForAuthorizeMercadoPagoTheme" parent="Theme.MercadoPagoTheme.NoActionBar">
+    <item name="android:textSize">@dimen/px_xxs_text</item>
+  </style>
+
+  <style name="Theme.CallForAuthorizeMercadoPagoTheme.NoActionbar" parent="Theme.MercadoPagoTheme.NoActionBar">
+    <item name="android:textSize">@dimen/px_xxs_text</item>
+  </style>
+
+  <style name="MLFont" parent="android:TextAppearance"/>
+  <style name="MLFont.Black"/>
+  <style name="MLFont.Bold"/>
+  <style name="MLFont.Bold.Extra"/>
+  <style name="MLFont.Bold.Semi"/>
+  <style name="MLFont.Light"/>
+  <style name="MLFont.Light.Large">
+    <item name="android:textSize">@dimen/ui_fontsize_large</item>
+    <item name="android:lineSpacingExtra">@dimen/ui_linespacing_large</item>
+  </style>
+  <style name="MLFont.Light.Medium">
+    <item name="android:textSize">@dimen/ui_fontsize_medium</item>
+    <item name="android:lineSpacingExtra">@dimen/ui_linespacing_medium</item>
+  </style>
+  <style name="MLFont.Light.Small">
+    <item name="android:textSize">@dimen/ui_fontsize_small</item>
+    <item name="android:lineSpacingExtra">@dimen/ui_linespacing_small</item>
+  </style>
+  <style name="MLFont.Light.XLarge">
+    <item name="android:textSize">@dimen/ui_fontsize_xlarge</item>
+    <item name="android:lineSpacingExtra">@dimen/ui_linespacing_xlarge</item>
+  </style>
+  <style name="MLFont.Light.XSmall">
+    <item name="android:textSize">@dimen/ui_fontsize_xsmall</item>
+    <item name="android:lineSpacingExtra">@dimen/ui_linespacing_xsmall</item>
+  </style>
+  <style name="MLFont.Light.XXLarge">
+    <item name="android:textSize">@dimen/ui_fontsize_xxlarge</item>
+    <item name="android:lineSpacingExtra">@dimen/ui_linespacing_xxlarge</item>
+  </style>
+  <style name="MLFont.Light.XXSmall">
+    <item name="android:textSize">@dimen/ui_fontsize_xxsmall</item>
+    <item name="android:lineSpacingExtra">@dimen/ui_linespacing_xxsmall</item>
+  </style>
+  <style name="MLFont.Medium"/>
+  <style name="MLFont.Regular"/>
+  <style name="MLFont.Regular.Large">
+    <item name="android:textSize">@dimen/ui_fontsize_large</item>
+    <item name="android:lineSpacingExtra">@dimen/ui_linespacing_large</item>
+  </style>
+  <style name="MLFont.Regular.Medium">
+    <item name="android:textSize">@dimen/ui_fontsize_medium</item>
+    <item name="android:lineSpacingExtra">@dimen/ui_linespacing_medium</item>
+  </style>
+  <style name="MLFont.Regular.Small">
+    <item name="android:textSize">@dimen/ui_fontsize_small</item>
+    <item name="android:lineSpacingExtra">@dimen/ui_linespacing_small</item>
+  </style>
+  <style name="MLFont.Regular.XLarge">
+    <item name="android:textSize">@dimen/ui_fontsize_xlarge</item>
+    <item name="android:lineSpacingExtra">@dimen/ui_linespacing_xlarge</item>
+  </style>
+  <style name="MLFont.Regular.XSmall">
+    <item name="android:textSize">@dimen/ui_fontsize_xsmall</item>
+    <item name="android:lineSpacingExtra">@dimen/ui_linespacing_xsmall</item>
+  </style>
+  <style name="MLFont.Regular.XXLarge">
+    <item name="android:textSize">@dimen/ui_fontsize_xxlarge</item>
+    <item name="android:lineSpacingExtra">@dimen/ui_linespacing_xxlarge</item>
+  </style>
+  <style name="MLFont.Regular.XXSmall">
+    <item name="android:textSize">@dimen/ui_fontsize_xxsmall</item>
+    <item name="android:lineSpacingExtra">@dimen/ui_linespacing_xxsmall</item>
+  </style>
+  <style name="MLFont.Thin"/>
 </resources>

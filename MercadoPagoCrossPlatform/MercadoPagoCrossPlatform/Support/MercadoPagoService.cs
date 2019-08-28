@@ -24,9 +24,9 @@ namespace MercadoPagoCrossPlatform.Support
             }
         }
 
-        public void StartPayment(string preferenceId, EventHandler onPaymentResult)
+        public void StartPayment(string publicKey, string preferenceId, EventHandler onPaymentResult)
         {
-            DependencyService.Get<IMercadoPagoService>().StartPayment(preferenceId, onPaymentResult);
+            DependencyService.Get<IMercadoPagoService>().StartPayment(publicKey, preferenceId, onPaymentResult);
         }
     }
 }

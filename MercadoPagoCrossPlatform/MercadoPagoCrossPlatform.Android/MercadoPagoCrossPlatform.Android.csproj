@@ -30,6 +30,10 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AndroidLinkMode>None</AndroidLinkMode>
+    <AotAssemblies>false</AotAssemblies>
+    <EnableLLVM>false</EnableLLVM>
+    <BundleAssemblies>false</BundleAssemblies>
+    <AndroidEnableMultiDex>true</AndroidEnableMultiDex>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -42,6 +46,23 @@
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Calligraphy">
+      <HintPath>C:\Users\Aaron Soria\source\repos\Calligraphy\Calligraphy\bin\Debug\Calligraphy.dll</HintPath>
+    </Reference>
+    <Reference Include="MercadoPagoCheckout, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\Aaron Soria\source\repos\MercadoPagoCheckout\MercadoPagoCheckout\bin\Release\MercadoPagoCheckout.dll</HintPath>
+    </Reference>
+    <Reference Include="MercadoPagoLegacy">
+      <HintPath>C:\Users\Aaron Soria\source\repos\MercadoPagoLegacy\MercadoPagoLegacy\bin\Debug\MercadoPagoLegacy.dll</HintPath>
+    </Reference>
+    <Reference Include="MercadoPagoService, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\Aaron Soria\source\repos\MercadoPagoCheckout\MercadoPagoCheckout\bin\Release\MercadoPagoService.dll</HintPath>
+    </Reference>
+    <Reference Include="MercadoPagoUI">
+      <HintPath>C:\Users\Aaron Soria\source\repos\MercadoPagoUI\MercadoPagoUI\bin\Debug\MercadoPagoUI.dll</HintPath>
+    </Reference>
     <Reference Include="Mono.Android" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -49,12 +70,64 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="3.3.0.967583" />
-    <PackageReference Include="Xamarin.Android.Support.Design" Version="27.0.2.1" />
-    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="27.0.2.1" />
-    <PackageReference Include="Xamarin.Android.Support.v4" Version="27.0.2.1" />
-    <PackageReference Include="Xamarin.Android.Support.v7.CardView" Version="27.0.2.1" />
-    <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter" Version="27.0.2.1" />
+    <PackageReference Include="GoogleGson">
+      <Version>2.8.5</Version>
+    </PackageReference>
+    <PackageReference Include="Naxam.SquareUp.OkHttp3.LoggingInterceptor">
+      <Version>3.11.0</Version>
+    </PackageReference>
+    <PackageReference Include="Square.OkHttp3">
+      <Version>3.11.0</Version>
+    </PackageReference>
+    <PackageReference Include="Square.OkHttp3.UrlConnection">
+      <Version>3.12.3</Version>
+    </PackageReference>
+    <PackageReference Include="Square.Picasso">
+      <Version>2.5.2.2</Version>
+    </PackageReference>
+    <PackageReference Include="Square.Retrofit2">
+      <Version>2.4.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Square.Retrofit2.ConverterGson">
+      <Version>2.4.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.Annotations">
+      <Version>28.0.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.Compat">
+      <Version>28.0.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.Core.UI">
+      <Version>28.0.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.Core.Utils">
+      <Version>28.0.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.Design">
+      <Version>28.0.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.Fragment">
+      <Version>28.0.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.Percent">
+      <Version>28.0.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.v4">
+      <Version>28.0.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat">
+      <Version>28.0.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.v7.CardView">
+      <Version>28.0.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.v7.RecyclerView">
+      <Version>28.0.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.Vector.Drawable">
+      <Version>28.0.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Forms" Version="4.2.0.709249" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
@@ -63,6 +136,9 @@
     <Compile Include="Service\MercadoPagoService.cs" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="Assets\fonts\Roboto-Light.ttf" />
+    <AndroidAsset Include="Assets\fonts\RobotoMono-Regular.ttf" />
+    <AndroidAsset Include="Assets\fonts\Roboto-Regular.ttf" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />
@@ -94,9 +170,12 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MercadoPagoCrossPlatform\MercadoPagoCrossPlatform.csproj">
-      <Project>{8DC90BCA-09F4-495D-AABD-991AE627E95A}</Project>
+      <Project>{C2AFFC7F-EC66-41BF-83E2-4B8F91C6DEB2}</Project>
       <Name>MercadoPagoCrossPlatform</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\dimens.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
