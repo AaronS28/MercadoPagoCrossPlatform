@@ -4,8 +4,8 @@
              xmlns:local="clr-namespace:MercadoPagoCrossPlatform"
              x:Class="MercadoPagoCrossPlatform.MainPage">
 
-    <StackLayout>
-        <Button Text="Start Payment" Clicked="Button_Clicked"/>
+    <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+        <Button Text="Start Payment" Clicked="Button_Clicked" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" HeightRequest="50" BackgroundColor="DarkGray"/>
     </StackLayout>
 
 </ContentPage>

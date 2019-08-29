@@ -17,12 +17,22 @@ namespace MercadoPagoCrossPlatform.iOS.Service
     {
         public void StartPayment(string publicKey, string preferenceId, EventHandler onPaymentResult)
         {
-            var mercadoPagoCheckoutBuilder = new MercadoPagoCheckoutBuilder(publicKey, preferenceId);
-            var mercadoPagoCheckout = new MercadoPagoCheckout(mercadoPagoCheckoutBuilder);
+            try
+            {
+                var mercadoPagoCheckoutBuilder = new MercadoPagoCheckoutBuilder(publicKey, preferenceId);
+                var mercadoPagoCheckout = new MercadoPagoCheckout(mercadoPagoCheckoutBuilder);
 
-            var window = UIApplication.SharedApplication.KeyWindow;
-            var vc = (UINavigationController)window.RootViewController;
-            mercadoPagoCheckout.StartWithNavigationController(vc, null);
+                var rootViewController = AppDelegate.Context.KeyWindow.RootViewController;
+                UINavigationController navigationController = new UINavigationController();
+                rootViewController.PresentViewController(navigationController, true, null);
+                LifeCycleProtocol lifeCycle = new LifeCycleProtocol();
+                
+                mercadoPagoCheckout.StartWithNavigationController(navigationController, lifeCycle);
+            }
+            catch (Exception ex)
+            {
+                Console.Write(ex.Message);
+            }
         }
     }
 }
