@@ -32,5 +32,6 @@ namespace MercadoPagoCrossPlatform.iOS
             LoadApplication(new App());
             return base.FinishedLaunching(app, options);
         }
+
     }
 }
