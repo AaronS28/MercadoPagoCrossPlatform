@@ -23,12 +23,12 @@ namespace MercadoPagoCrossPlatform.iOS
         //
         // You have 17 seconds to return from this method, or iOS will terminate your application.
         //
-        private UINavigationController controller;
 
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             Context = app;
             global::Xamarin.Forms.Forms.Init();
+
             LoadApplication(new App());
             return base.FinishedLaunching(app, options);
         }
