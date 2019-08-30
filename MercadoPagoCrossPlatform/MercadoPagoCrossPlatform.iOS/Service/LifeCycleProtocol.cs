@@ -11,21 +11,10 @@ namespace MercadoPagoCrossPlatform.iOS.Service
 {
     public class LifeCycleProtocol : MercadoPagoSDK.PXLifeCycleProtocol
     {
-        //public override Action<PXResult> FinishCheckout
-        //{
-        //    get
-        //    {
-                
-        //    }
-        //}
 
-        //public override Action CancelCheckout
-        //{
-        //    get
-        //    {
-        //        var a = "hola";
-        //        return null;
-        //    }
-        //}
+
+
     }
+
+
 }

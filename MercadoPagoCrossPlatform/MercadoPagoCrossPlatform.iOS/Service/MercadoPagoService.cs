@@ -24,8 +24,6 @@ namespace MercadoPagoCrossPlatform.iOS.Service
             {
                 var mercadoPagoCheckoutBuilder = new MercadoPagoCheckoutBuilder(publicKey, preferenceId);
                 var mercadoPagoCheckout = new MercadoPagoCheckout(mercadoPagoCheckoutBuilder);
-                //LifeCycleProtocol lifeCycle = new LifeCycleProtocol();
-
 
                 var rootViewController = UIApplication.SharedApplication.KeyWindow.RootViewController;
                 navigationController = new UINavigationController();
@@ -40,23 +38,18 @@ namespace MercadoPagoCrossPlatform.iOS.Service
             }
         }
 
+        public override Action<PXResult> FinishCheckout => OnResultComes;
 
-        public override Action<PXResult> FinishCheckout
+        public override Action CancelCheckout => OnCancelCheckout;
+
+        private void OnResultComes(PXResult result)
         {
-            get
-            {
-                navigationController.PopToRootViewController(true);
-                return null;
-            }
+            Console.WriteLine("Do this with result", result.GetStatus());
         }
 
-        public override Action CancelCheckout
+        private void OnCancelCheckout()
         {
-            get
-            {
-                var a = "hola";
-                return null;
-            }
+            Console.WriteLine("Se cancelo el Checkout");
         }
     }
 }
