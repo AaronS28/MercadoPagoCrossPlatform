@@ -16,21 +16,24 @@ namespace MercadoPagoCrossPlatform.iOS.Service
     public class MercadoPagoService : PXLifeCycleProtocol, IMercadoPagoService
     {
 
-        private UINavigationController navigationController;
+        private UINavigationController NavigationController;
+        private EventHandler OnPaymentResult;
+        private UIViewController OldViewController;
 
         public void StartPayment(string publicKey, string preferenceId, EventHandler onPaymentResult)
         {
             try
             {
+                OnPaymentResult = onPaymentResult;
+
                 var mercadoPagoCheckoutBuilder = new MercadoPagoCheckoutBuilder(publicKey, preferenceId);
                 var mercadoPagoCheckout = new MercadoPagoCheckout(mercadoPagoCheckoutBuilder);
 
-                var rootViewController = UIApplication.SharedApplication.KeyWindow.RootViewController;
-                navigationController = new UINavigationController();
-                rootViewController.PresentViewController(navigationController, true, null);
-                
-                mercadoPagoCheckout.StartWithNavigationController(navigationController, this);
-                var result = this.FinishCheckout;
+                OldViewController = UIApplication.SharedApplication.KeyWindow.RootViewController;
+                NavigationController = new UINavigationController();
+                OldViewController.PresentViewController(NavigationController, true, null);
+                mercadoPagoCheckout.StartWithNavigationController(NavigationController, this);
+
             }
             catch (Exception ex)
             {
@@ -44,7 +47,41 @@ namespace MercadoPagoCrossPlatform.iOS.Service
 
         private void OnResultComes(PXResult result)
         {
-            Console.WriteLine("Do this with result", result.GetStatus());
+            Support.MercadoPagoPaymentResponse response = null;
+            if (result != null)
+            {
+                response = new Support.MercadoPagoPaymentResponse
+                {
+                    PaymentId = result.PaymentId,
+                    PaymentDescription = result.StatusDetail
+                };
+
+                switch (result.Status)
+                {
+                    case "approved":
+                        response.PaymentStatus = Support.PaymentStatus.APPROVED;
+                        break;
+                    case "in_process":
+                        response.PaymentStatus = Support.PaymentStatus.INPROCESS;
+                        break;
+                    case "rejected":
+                        response.PaymentStatus = Support.PaymentStatus.REJECTED;
+                        break;
+                    case "pending":
+                        response.PaymentStatus = Support.PaymentStatus.PENDING;
+                        break;
+                    case "cancelled":
+                        response.PaymentStatus = Support.PaymentStatus.CANCELLED;
+                        break;
+                    case "expired":
+                        response.PaymentStatus = Support.PaymentStatus.EXPIRED;
+                        break;
+                }
+            }
+
+            //NavigationController.ShowViewController(OldViewController, null);
+            
+            OnPaymentResult?.Invoke(response, EventArgs.Empty);
         }
 
         private void OnCancelCheckout()
