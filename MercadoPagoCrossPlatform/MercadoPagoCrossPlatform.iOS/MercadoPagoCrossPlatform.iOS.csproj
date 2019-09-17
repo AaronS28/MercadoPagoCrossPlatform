@@ -144,7 +144,8 @@
     </ImageAsset>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="MercadoPagoSDK">
+    <Reference Include="MercadoPagoSDK, Version=1.0.7180.32772, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Users\Aaron Soria\source\repos\testMercadoPagoSDK\testMercadoPagoSDK\bin\Release\MercadoPagoSDK.dll</HintPath>
     </Reference>
     <Reference Include="System" />

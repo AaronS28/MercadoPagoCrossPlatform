@@ -92,6 +92,8 @@ namespace MercadoPagoCrossPlatform.iOS.Service
         private void OnCancelCheckout()
         {
             Console.WriteLine("Se cancelo el Checkout");
+            NavigationController.DismissViewController(true, null);
+            OnPaymentResult?.Invoke(null, EventArgs.Empty);
         }
     }
 }

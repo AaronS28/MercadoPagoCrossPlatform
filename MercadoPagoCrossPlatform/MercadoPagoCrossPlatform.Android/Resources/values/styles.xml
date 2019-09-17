@@ -28,10 +28,10 @@
     <item name="colorAccent">#FF4081</item>
   </style>
 
-  <declare-styleable name="MPTextView">
+  <!--<declare-styleable name="MPTextView">
     <attr format="string" name="fontStyle" />
     <attr format="boolean" name="allowCustomFont" />
-  </declare-styleable>
+  </declare-styleable>-->
 
   <!--<declare-styleable name="MeliButton">
     <attr format="string" name="state"/>
